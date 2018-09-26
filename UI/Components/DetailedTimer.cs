@@ -37,6 +37,8 @@ namespace LiveSplit.UI.Components
         public Image ShadowImage { get; set; }
         protected Image OldImage { get; set; }
 
+        public float SegmentTimerSizeRatio => Settings.ShowTimer ? Settings.SegmentTimerSizeRatio : 100f;
+
         public float PaddingTop => 0f;
         public float PaddingLeft => 7f;
         public float PaddingBottom => 0f;
@@ -146,29 +148,31 @@ namespace LiveSplit.UI.Components
                 var timesFont = new Font(Settings.SegmentTimesFont.FontFamily, Settings.SegmentTimesFont.Size, Settings.SegmentTimesFont.Style);
                 LabelSegment.Font = labelsFont;
                 LabelSegment.X = 5 + IconWidth;
-                LabelSegment.Y = height * ((100f - Settings.SegmentTimerSizeRatio) / 100f);
+                LabelSegment.Y = height * ((100f - SegmentTimerSizeRatio) / 100f);
                 LabelSegment.Width = width - SegmentTimer.ActualWidth - 5 - IconWidth;
-                LabelSegment.Height = height * (Settings.SegmentTimerSizeRatio / 200f) * (!HideComparison ? 1f : 2f);
+                LabelSegment.Height = height * (SegmentTimerSizeRatio / 200f) * (!HideComparison ? 1f : 2f);
                 LabelSegment.HorizontalAlignment = StringAlignment.Near;
                 LabelSegment.VerticalAlignment = StringAlignment.Center;
                 LabelSegment.ForeColor = Settings.SegmentLabelsColor;
                 LabelSegment.HasShadow = state.LayoutSettings.DropShadows;
                 LabelSegment.ShadowColor = state.LayoutSettings.ShadowsColor;
                 LabelSegment.OutlineColor = state.LayoutSettings.TextOutlineColor;
+                RepositionSegmentLabel(LabelSegment, height);
                 if (Comparison != "None")
                     LabelSegment.Draw(g);
 
                 LabelBest.Font = labelsFont;
                 LabelBest.X = 5 + IconWidth;
-                LabelBest.Y = height * ((100f - Settings.SegmentTimerSizeRatio / 2f) / 100f);
+                LabelBest.Y = height * ((100f - SegmentTimerSizeRatio / 2f) / 100f);
                 LabelBest.Width = width - SegmentTimer.ActualWidth - 5 - IconWidth;
-                LabelBest.Height = height * (Settings.SegmentTimerSizeRatio / 200f);
+                LabelBest.Height = height * (SegmentTimerSizeRatio / 200f);
                 LabelBest.HorizontalAlignment = StringAlignment.Near;
                 LabelBest.VerticalAlignment = StringAlignment.Center;
                 LabelBest.ForeColor = Settings.SegmentLabelsColor;
                 LabelBest.HasShadow = state.LayoutSettings.DropShadows;
                 LabelBest.ShadowColor = state.LayoutSettings.ShadowsColor;
                 LabelBest.OutlineColor = state.LayoutSettings.TextOutlineColor;
+                RepositionBestLabel(LabelBest, height);
                 if (!HideComparison)
                     LabelBest.Draw(g);
 
@@ -178,9 +182,9 @@ namespace LiveSplit.UI.Components
                 {
                     SegmentTime.Font = timesFont;
                     SegmentTime.X = offset + IconWidth;
-                    SegmentTime.Y = height * ((100f - Settings.SegmentTimerSizeRatio) / 100f);
+                    SegmentTime.Y = height * ((100f - SegmentTimerSizeRatio) / 100f);
                     SegmentTime.Width = width - SegmentTimer.ActualWidth - offset - IconWidth;
-                    SegmentTime.Height = height * (Settings.SegmentTimerSizeRatio / 200f) * (!HideComparison ? 1f : 2f);
+                    SegmentTime.Height = height * (SegmentTimerSizeRatio / 200f) * (!HideComparison ? 1f : 2f);
                     SegmentTime.HorizontalAlignment = StringAlignment.Near;
                     SegmentTime.VerticalAlignment = StringAlignment.Center;
                     SegmentTime.ForeColor = Settings.SegmentTimesColor;
@@ -188,6 +192,7 @@ namespace LiveSplit.UI.Components
                     SegmentTime.ShadowColor = state.LayoutSettings.ShadowsColor;
                     SegmentTime.OutlineColor = state.LayoutSettings.TextOutlineColor;
                     SegmentTime.IsMonospaced = true;
+                    RepositionSegmentLabel(SegmentTime, height);
                     SegmentTime.Draw(g);
                 }
 
@@ -195,9 +200,9 @@ namespace LiveSplit.UI.Components
                 {
                     BestSegmentTime.Font = timesFont;
                     BestSegmentTime.X = offset + IconWidth;
-                    BestSegmentTime.Y = height * ((100f - Settings.SegmentTimerSizeRatio / 2f) / 100f);
+                    BestSegmentTime.Y = height * ((100f - SegmentTimerSizeRatio / 2f) / 100f);
                     BestSegmentTime.Width = width - SegmentTimer.ActualWidth - offset - IconWidth;
-                    BestSegmentTime.Height = height * (Settings.SegmentTimerSizeRatio / 200f);
+                    BestSegmentTime.Height = height * (SegmentTimerSizeRatio / 200f);
                     BestSegmentTime.HorizontalAlignment = StringAlignment.Near;
                     BestSegmentTime.VerticalAlignment = StringAlignment.Center;
                     BestSegmentTime.ForeColor = Settings.SegmentTimesColor;
@@ -205,21 +210,54 @@ namespace LiveSplit.UI.Components
                     BestSegmentTime.ShadowColor = state.LayoutSettings.ShadowsColor;
                     BestSegmentTime.OutlineColor = state.LayoutSettings.TextOutlineColor;
                     BestSegmentTime.IsMonospaced = true;
+                    RepositionBestLabel(BestSegmentTime, height);
                     BestSegmentTime.Draw(g);
                 }
                 SplitName.Font = Settings.SplitNameFont;
                 SplitName.X = IconWidth + 5;
                 SplitName.Y = 0;
                 SplitName.Width = width - InternalComponent.ActualWidth - IconWidth - 5;
-                SplitName.Height = height * ((100f - Settings.SegmentTimerSizeRatio) / 100f);
+                SplitName.Height = height * ((100f - SegmentTimerSizeRatio) / 100f);
                 SplitName.HorizontalAlignment = StringAlignment.Near;
                 SplitName.VerticalAlignment = StringAlignment.Center;
                 SplitName.ForeColor = Settings.SplitNameColor;
                 SplitName.HasShadow = state.LayoutSettings.DropShadows;
                 SplitName.ShadowColor = state.LayoutSettings.ShadowsColor;
                 SplitName.OutlineColor = state.LayoutSettings.TextOutlineColor;
+                if (!Settings.ShowTimer)
+                {
+                    SplitName.Width = width - SegmentTimer.ActualWidth - 5 - IconWidth;
+                    SplitName.VerticalAlignment = StringAlignment.Near;
+                }
                 if (Settings.ShowSplitName)
                     SplitName.Draw(g);
+            }
+        }
+
+        private void RepositionSegmentLabel(SimpleLabel label, float height)
+        {
+            if (!Settings.ShowTimer)
+            {
+                label.Height = height;
+
+                if (!Settings.ShowSplitName && !HideComparison)
+                {
+                    label.VerticalAlignment = StringAlignment.Near;
+                }
+                if (Settings.ShowSplitName && HideComparison)
+                {
+                    label.VerticalAlignment = StringAlignment.Far;
+                }
+            }
+        }
+
+        private void RepositionBestLabel(SimpleLabel label, float height)
+        {
+            if (!Settings.ShowTimer)
+            {
+                label.Y = 0;
+                label.Height = height;
+                label.VerticalAlignment = StringAlignment.Far;
             }
         }
 
@@ -227,11 +265,16 @@ namespace LiveSplit.UI.Components
         {
             DrawGeneral(g, state, width, VerticalHeight);
             var oldMatrix = g.Transform;
-            InternalComponent.Settings.TimerHeight = VerticalHeight * ((100f - Settings.SegmentTimerSizeRatio) / 100f);
-            InternalComponent.DrawVertical(g, state, width, clipRegion);
-            g.Transform = oldMatrix;
-            g.TranslateTransform(0, VerticalHeight * ((100f - Settings.SegmentTimerSizeRatio) / 100f));
-            SegmentTimer.Settings.TimerHeight = VerticalHeight * (Settings.SegmentTimerSizeRatio / 100f);
+
+            if (Settings.ShowTimer)
+            {
+                InternalComponent.Settings.TimerHeight = VerticalHeight * ((100f - SegmentTimerSizeRatio) / 100f);
+                InternalComponent.DrawVertical(g, state, width, clipRegion);
+                g.Transform = oldMatrix;
+            }
+
+            g.TranslateTransform(0, VerticalHeight * ((100f - SegmentTimerSizeRatio) / 100f));
+            SegmentTimer.Settings.TimerHeight = VerticalHeight * (SegmentTimerSizeRatio / 100f);
             SegmentTimer.DrawVertical(g, state, width, clipRegion);
             g.Transform = oldMatrix;
         }
@@ -240,11 +283,16 @@ namespace LiveSplit.UI.Components
         {
             DrawGeneral(g, state, HorizontalWidth, height);
             var oldMatrix = g.Transform;
-            InternalComponent.Settings.TimerWidth = HorizontalWidth;
-            InternalComponent.DrawHorizontal(g, state, height * ((100f - Settings.SegmentTimerSizeRatio) / 100f), clipRegion);
-            g.Transform = oldMatrix;
-            g.TranslateTransform(0, height * ((100f - Settings.SegmentTimerSizeRatio) / 100f));
-            SegmentTimer.DrawHorizontal(g, state, height * (Settings.SegmentTimerSizeRatio / 100f), clipRegion);
+
+            if (Settings.ShowTimer)
+            {
+                InternalComponent.Settings.TimerWidth = HorizontalWidth;
+                InternalComponent.DrawHorizontal(g, state, height * ((100f - SegmentTimerSizeRatio) / 100f), clipRegion);
+                g.Transform = oldMatrix;
+            }
+
+            g.TranslateTransform(0, height * ((100f - SegmentTimerSizeRatio) / 100f));
+            SegmentTimer.DrawHorizontal(g, state, height * (SegmentTimerSizeRatio / 100f), clipRegion);
             SegmentTimer.Settings.TimerWidth = HorizontalWidth;
             g.Transform = oldMatrix;
         }

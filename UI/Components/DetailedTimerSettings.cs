@@ -17,6 +17,7 @@ namespace LiveSplit.UI.Components
 
         public LiveSplitState CurrentState { get; set; }
 
+        public bool ShowTimer { get; set; }
         public bool TimerShowGradient { get; set; }
         public bool OverrideTimerColors { get; set; }
         public bool SegmentTimerShowGradient { get; set; }
@@ -114,6 +115,7 @@ namespace LiveSplit.UI.Components
             Width = 200;
             SegmentTimerSizeRatio = 40;
 
+            ShowTimer = true;
             TimerShowGradient = true;
             OverrideTimerColors = false;
             SegmentTimerShowGradient = true;
@@ -150,6 +152,7 @@ namespace LiveSplit.UI.Components
             HideComparison = false;
             TimingMethod = "Current Timing Method";
 
+            chkShowTimer.DataBindings.Add("Checked", this, "ShowTimer", false, DataSourceUpdateMode.OnPropertyChanged);
             chkShowGradientSegmentTimer.DataBindings.Add("Checked", this, "SegmentTimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
             chkShowGradientTimer.DataBindings.Add("Checked", this, "TimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
             chkOverrideTimerColors.DataBindings.Add("Checked", this, "OverrideTimerColors", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -275,6 +278,7 @@ namespace LiveSplit.UI.Components
             Height = SettingsHelper.ParseFloat(element["Height"]);
             Width = SettingsHelper.ParseFloat(element["Width"]);
             SegmentTimerSizeRatio = SettingsHelper.ParseFloat(element["SegmentTimerSizeRatio"]);
+            ShowTimer = SettingsHelper.ParseBool(element["ShowTimer"], true);
             TimerShowGradient = SettingsHelper.ParseBool(element["TimerShowGradient"]);
             SegmentTimerShowGradient = SettingsHelper.ParseBool(element["SegmentTimerShowGradient"]);
             TimerColor = SettingsHelper.ParseColor(element["TimerColor"]);
@@ -355,6 +359,7 @@ namespace LiveSplit.UI.Components
             SettingsHelper.CreateSetting(document, parent, "Height", Height) ^
             SettingsHelper.CreateSetting(document, parent, "Width", Width) ^
             SettingsHelper.CreateSetting(document, parent, "SegmentTimerSizeRatio", SegmentTimerSizeRatio) ^
+            SettingsHelper.CreateSetting(document, parent, "ShowTimer", ShowTimer) ^
             SettingsHelper.CreateSetting(document, parent, "TimerShowGradient", TimerShowGradient) ^
             SettingsHelper.CreateSetting(document, parent, "OverrideTimerColors", OverrideTimerColors) ^
             SettingsHelper.CreateSetting(document, parent, "SegmentTimerShowGradient", SegmentTimerShowGradient) ^
