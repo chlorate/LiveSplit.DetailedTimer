@@ -179,7 +179,7 @@
             this.btnColor2.Location = new System.Drawing.Point(185, 3);
             this.btnColor2.Name = "btnColor2";
             this.btnColor2.Size = new System.Drawing.Size(23, 23);
-            this.btnColor2.TabIndex = 1;
+            this.btnColor2.TabIndex = 2;
             this.btnColor2.UseVisualStyleBackColor = false;
             this.btnColor2.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -190,7 +190,7 @@
             this.label11.Location = new System.Drawing.Point(3, 8);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 13);
-            this.label11.TabIndex = 22;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Background Color:";
             // 
             // btnColor1
@@ -202,7 +202,7 @@
             this.btnColor1.Location = new System.Drawing.Point(156, 3);
             this.btnColor1.Name = "btnColor1";
             this.btnColor1.Size = new System.Drawing.Size(23, 23);
-            this.btnColor1.TabIndex = 0;
+            this.btnColor1.TabIndex = 1;
             this.btnColor1.UseVisualStyleBackColor = false;
             this.btnColor1.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -221,7 +221,7 @@
             this.cmbGradientType.Location = new System.Drawing.Point(214, 4);
             this.cmbGradientType.Name = "cmbGradientType";
             this.cmbGradientType.Size = new System.Drawing.Size(228, 21);
-            this.cmbGradientType.TabIndex = 2;
+            this.cmbGradientType.TabIndex = 3;
             this.cmbGradientType.SelectedIndexChanged += new System.EventHandler(this.cmbGradientType_SelectedIndexChanged);
             // 
             // groupBox9
@@ -232,7 +232,7 @@
             this.groupBox9.Location = new System.Drawing.Point(3, 813);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(439, 78);
-            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabIndex = 15;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Icon";
             // 
@@ -273,7 +273,7 @@
             this.label7.Location = new System.Drawing.Point(3, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 13);
-            this.label7.TabIndex = 23;
+            this.label7.TabIndex = 1;
             this.label7.Text = "Size:";
             // 
             // trkIconSize
@@ -284,7 +284,7 @@
             this.trkIconSize.Minimum = 20;
             this.trkIconSize.Name = "trkIconSize";
             this.trkIconSize.Size = new System.Drawing.Size(278, 24);
-            this.trkIconSize.TabIndex = 1;
+            this.trkIconSize.TabIndex = 2;
             this.trkIconSize.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkIconSize.Value = 20;
             // 
@@ -297,7 +297,7 @@
             this.trkSegmentTimerRatio.Minimum = 10;
             this.trkSegmentTimerRatio.Name = "trkSegmentTimerRatio";
             this.trkSegmentTimerRatio.Size = new System.Drawing.Size(286, 23);
-            this.trkSegmentTimerRatio.TabIndex = 6;
+            this.trkSegmentTimerRatio.TabIndex = 10;
             this.trkSegmentTimerRatio.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkSegmentTimerRatio.Value = 10;
             // 
@@ -309,7 +309,7 @@
             this.groupBox1.Location = new System.Drawing.Point(3, 231);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(439, 218);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Timer";
             // 
@@ -354,7 +354,7 @@
             this.cmbAccuracy.Location = new System.Drawing.Point(291, 144);
             this.cmbAccuracy.Name = "cmbAccuracy";
             this.cmbAccuracy.Size = new System.Drawing.Size(139, 21);
-            this.cmbAccuracy.TabIndex = 7;
+            this.cmbAccuracy.TabIndex = 5;
             this.cmbAccuracy.SelectedIndexChanged += new System.EventHandler(this.cmbAccuracy_SelectedIndexChanged);
             // 
             // lblFormat
@@ -375,7 +375,7 @@
             this.grpTimerColor.Location = new System.Drawing.Point(3, 32);
             this.grpTimerColor.Name = "grpTimerColor";
             this.grpTimerColor.Size = new System.Drawing.Size(427, 77);
-            this.grpTimerColor.TabIndex = 0;
+            this.grpTimerColor.TabIndex = 1;
             this.grpTimerColor.TabStop = false;
             this.grpTimerColor.Text = "Color";
             // 
@@ -418,7 +418,7 @@
             this.btnTimerColor.Location = new System.Drawing.Point(141, 32);
             this.btnTimerColor.Name = "btnTimerColor";
             this.btnTimerColor.Size = new System.Drawing.Size(23, 23);
-            this.btnTimerColor.TabIndex = 1;
+            this.btnTimerColor.TabIndex = 2;
             this.btnTimerColor.UseVisualStyleBackColor = false;
             this.btnTimerColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -429,7 +429,7 @@
             this.label1.Location = new System.Drawing.Point(3, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 12;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Color:";
             // 
             // chkShowGradientTimer
@@ -440,7 +440,7 @@
             this.chkShowGradientTimer.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkShowGradientTimer.Name = "chkShowGradientTimer";
             this.chkShowGradientTimer.Size = new System.Drawing.Size(134, 17);
-            this.chkShowGradientTimer.TabIndex = 1;
+            this.chkShowGradientTimer.TabIndex = 2;
             this.chkShowGradientTimer.Text = "Show Gradient";
             this.chkShowGradientTimer.UseVisualStyleBackColor = true;
             // 
@@ -451,7 +451,7 @@
             this.lblDecimalsSize.Location = new System.Drawing.Point(3, 177);
             this.lblDecimalsSize.Name = "lblDecimalsSize";
             this.lblDecimalsSize.Size = new System.Drawing.Size(138, 13);
-            this.lblDecimalsSize.TabIndex = 5;
+            this.lblDecimalsSize.TabIndex = 6;
             this.lblDecimalsSize.Text = "Decimals Font Size:";
             // 
             // cmbDigitsFormat
@@ -480,7 +480,7 @@
             this.trkDecimalsSize.Minimum = 10;
             this.trkDecimalsSize.Name = "trkDecimalsSize";
             this.trkDecimalsSize.Size = new System.Drawing.Size(283, 24);
-            this.trkDecimalsSize.TabIndex = 6;
+            this.trkDecimalsSize.TabIndex = 7;
             this.trkDecimalsSize.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkDecimalsSize.Value = 10;
             // 
@@ -491,7 +491,7 @@
             this.chkShowTimer.Location = new System.Drawing.Point(3, 6);
             this.chkShowTimer.Name = "chkShowTimer";
             this.chkShowTimer.Size = new System.Drawing.Size(138, 17);
-            this.chkShowTimer.TabIndex = 8;
+            this.chkShowTimer.TabIndex = 0;
             this.chkShowTimer.Text = "Show Timer";
             this.chkShowTimer.UseVisualStyleBackColor = true;
             this.chkShowTimer.CheckedChanged += new System.EventHandler(this.chkShowTimer_CheckedChanged);
@@ -503,7 +503,7 @@
             this.lblSize.Location = new System.Drawing.Point(3, 178);
             this.lblSize.Name = "lblSize";
             this.lblSize.Size = new System.Drawing.Size(147, 13);
-            this.lblSize.TabIndex = 1;
+            this.lblSize.TabIndex = 7;
             this.lblSize.Text = "Height:";
             // 
             // trkSize
@@ -513,7 +513,7 @@
             this.trkSize.Location = new System.Drawing.Point(156, 173);
             this.trkSize.Name = "trkSize";
             this.trkSize.Size = new System.Drawing.Size(286, 23);
-            this.trkSize.TabIndex = 5;
+            this.trkSize.TabIndex = 8;
             this.trkSize.TickStyle = System.Windows.Forms.TickStyle.None;
             // 
             // groupBox3
@@ -524,7 +524,7 @@
             this.groupBox3.Location = new System.Drawing.Point(3, 455);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(439, 135);
-            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Segment Timer";
             // 
@@ -566,7 +566,7 @@
             this.cmbSegmentAccuracy.Location = new System.Drawing.Point(291, 62);
             this.cmbSegmentAccuracy.Name = "cmbSegmentAccuracy";
             this.cmbSegmentAccuracy.Size = new System.Drawing.Size(139, 21);
-            this.cmbSegmentAccuracy.TabIndex = 6;
+            this.cmbSegmentAccuracy.TabIndex = 5;
             this.cmbSegmentAccuracy.SelectedIndexChanged += new System.EventHandler(this.cmbSegmentAccuracy_SelectedIndexChanged);
             // 
             // chkShowGradientSegmentTimer
@@ -577,7 +577,7 @@
             this.chkShowGradientSegmentTimer.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkShowGradientSegmentTimer.Name = "chkShowGradientSegmentTimer";
             this.chkShowGradientSegmentTimer.Size = new System.Drawing.Size(134, 17);
-            this.chkShowGradientSegmentTimer.TabIndex = 1;
+            this.chkShowGradientSegmentTimer.TabIndex = 2;
             this.chkShowGradientSegmentTimer.Text = "Show Gradient";
             this.chkShowGradientSegmentTimer.UseVisualStyleBackColor = true;
             // 
@@ -598,7 +598,7 @@
             this.label14.Location = new System.Drawing.Point(3, 66);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(138, 13);
-            this.label14.TabIndex = 2;
+            this.label14.TabIndex = 3;
             this.label14.Text = "Format:";
             // 
             // label18
@@ -608,7 +608,7 @@
             this.label18.Location = new System.Drawing.Point(3, 95);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(138, 13);
-            this.label18.TabIndex = 4;
+            this.label18.TabIndex = 6;
             this.label18.Text = "Decimals Font Size:";
             // 
             // cmbSegmentDigitsFormat
@@ -625,7 +625,7 @@
             this.cmbSegmentDigitsFormat.Name = "cmbSegmentDigitsFormat";
             this.cmbSegmentDigitsFormat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbSegmentDigitsFormat.Size = new System.Drawing.Size(138, 21);
-            this.cmbSegmentDigitsFormat.TabIndex = 3;
+            this.cmbSegmentDigitsFormat.TabIndex = 4;
             this.cmbSegmentDigitsFormat.SelectedIndexChanged += new System.EventHandler(this.cmbSegmentDigitsFormat_SelectedIndexChanged);
             // 
             // btnSegmentTimerColor
@@ -636,7 +636,7 @@
             this.btnSegmentTimerColor.Location = new System.Drawing.Point(147, 3);
             this.btnSegmentTimerColor.Name = "btnSegmentTimerColor";
             this.btnSegmentTimerColor.Size = new System.Drawing.Size(23, 23);
-            this.btnSegmentTimerColor.TabIndex = 0;
+            this.btnSegmentTimerColor.TabIndex = 1;
             this.btnSegmentTimerColor.UseVisualStyleBackColor = false;
             this.btnSegmentTimerColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -649,7 +649,7 @@
             this.trkSegmentDecimalsSize.Minimum = 10;
             this.trkSegmentDecimalsSize.Name = "trkSegmentDecimalsSize";
             this.trkSegmentDecimalsSize.Size = new System.Drawing.Size(283, 23);
-            this.trkSegmentDecimalsSize.TabIndex = 5;
+            this.trkSegmentDecimalsSize.TabIndex = 7;
             this.trkSegmentDecimalsSize.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkSegmentDecimalsSize.Value = 10;
             // 
@@ -660,7 +660,7 @@
             this.label5.Location = new System.Drawing.Point(3, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 13);
-            this.label5.TabIndex = 17;
+            this.label5.TabIndex = 9;
             this.label5.Text = "Segment Timer Size:";
             // 
             // groupBox7
@@ -671,7 +671,7 @@
             this.groupBox7.Location = new System.Drawing.Point(3, 596);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(439, 77);
-            this.groupBox7.TabIndex = 9;
+            this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Segment Labels";
             // 
@@ -702,7 +702,7 @@
             this.label3.Location = new System.Drawing.Point(3, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 13);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Color:";
             // 
             // btnSegmentLabelsColor
@@ -713,7 +713,7 @@
             this.btnSegmentLabelsColor.Location = new System.Drawing.Point(149, 32);
             this.btnSegmentLabelsColor.Name = "btnSegmentLabelsColor";
             this.btnSegmentLabelsColor.Size = new System.Drawing.Size(23, 23);
-            this.btnSegmentLabelsColor.TabIndex = 1;
+            this.btnSegmentLabelsColor.TabIndex = 4;
             this.btnSegmentLabelsColor.UseVisualStyleBackColor = false;
             this.btnSegmentLabelsColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -724,7 +724,7 @@
             this.label6.Location = new System.Drawing.Point(3, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 13);
-            this.label6.TabIndex = 15;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Font:";
             // 
             // lblSegmentLabelsFont
@@ -734,7 +734,7 @@
             this.lblSegmentLabelsFont.Location = new System.Drawing.Point(149, 8);
             this.lblSegmentLabelsFont.Name = "lblSegmentLabelsFont";
             this.lblSegmentLabelsFont.Size = new System.Drawing.Size(200, 13);
-            this.lblSegmentLabelsFont.TabIndex = 16;
+            this.lblSegmentLabelsFont.TabIndex = 1;
             this.lblSegmentLabelsFont.Text = "Font";
             // 
             // btnSegmentLabelsFont
@@ -743,7 +743,7 @@
             this.btnSegmentLabelsFont.Location = new System.Drawing.Point(355, 3);
             this.btnSegmentLabelsFont.Name = "btnSegmentLabelsFont";
             this.btnSegmentLabelsFont.Size = new System.Drawing.Size(75, 23);
-            this.btnSegmentLabelsFont.TabIndex = 0;
+            this.btnSegmentLabelsFont.TabIndex = 2;
             this.btnSegmentLabelsFont.Text = "Choose...";
             this.btnSegmentLabelsFont.UseVisualStyleBackColor = true;
             this.btnSegmentLabelsFont.Click += new System.EventHandler(this.btnSegmentLabelsFont_Click);
@@ -756,7 +756,7 @@
             this.groupBox8.Location = new System.Drawing.Point(3, 679);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(439, 128);
-            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Segment Times";
             // 
@@ -789,7 +789,7 @@
             this.label8.Location = new System.Drawing.Point(3, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 13);
-            this.label8.TabIndex = 15;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Font:";
             // 
             // groupBox6
@@ -800,7 +800,7 @@
             this.groupBox6.Location = new System.Drawing.Point(3, 61);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(427, 45);
-            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Accuracy";
             // 
@@ -867,7 +867,7 @@
             this.lblSegmentTimesFont.Location = new System.Drawing.Point(150, 8);
             this.lblSegmentTimesFont.Name = "lblSegmentTimesFont";
             this.lblSegmentTimesFont.Size = new System.Drawing.Size(199, 13);
-            this.lblSegmentTimesFont.TabIndex = 16;
+            this.lblSegmentTimesFont.TabIndex = 1;
             this.lblSegmentTimesFont.Text = "Font";
             // 
             // btnSegmentTimesFont
@@ -876,7 +876,7 @@
             this.btnSegmentTimesFont.Location = new System.Drawing.Point(355, 3);
             this.btnSegmentTimesFont.Name = "btnSegmentTimesFont";
             this.btnSegmentTimesFont.Size = new System.Drawing.Size(75, 23);
-            this.btnSegmentTimesFont.TabIndex = 0;
+            this.btnSegmentTimesFont.TabIndex = 2;
             this.btnSegmentTimesFont.Text = "Choose...";
             this.btnSegmentTimesFont.UseVisualStyleBackColor = true;
             this.btnSegmentTimesFont.Click += new System.EventHandler(this.btnSegmentTimesFont_Click);
@@ -888,7 +888,7 @@
             this.label4.Location = new System.Drawing.Point(3, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 13);
-            this.label4.TabIndex = 15;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Color:";
             // 
             // btnSegmentTimesColor
@@ -899,7 +899,7 @@
             this.btnSegmentTimesColor.Location = new System.Drawing.Point(150, 32);
             this.btnSegmentTimesColor.Name = "btnSegmentTimesColor";
             this.btnSegmentTimesColor.Size = new System.Drawing.Size(23, 23);
-            this.btnSegmentTimesColor.TabIndex = 1;
+            this.btnSegmentTimesColor.TabIndex = 4;
             this.btnSegmentTimesColor.UseVisualStyleBackColor = false;
             this.btnSegmentTimesColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -911,7 +911,7 @@
             this.groupBox10.Location = new System.Drawing.Point(3, 897);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(439, 107);
-            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabIndex = 16;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Split Name";
             // 
@@ -959,7 +959,7 @@
             this.btnSplitNameColor.Location = new System.Drawing.Point(152, 61);
             this.btnSplitNameColor.Name = "btnSplitNameColor";
             this.btnSplitNameColor.Size = new System.Drawing.Size(23, 24);
-            this.btnSplitNameColor.TabIndex = 2;
+            this.btnSplitNameColor.TabIndex = 5;
             this.btnSplitNameColor.UseVisualStyleBackColor = false;
             this.btnSplitNameColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -970,7 +970,7 @@
             this.label9.Location = new System.Drawing.Point(3, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 13);
-            this.label9.TabIndex = 7;
+            this.label9.TabIndex = 4;
             this.label9.Text = "Split Name Color:";
             // 
             // label10
@@ -980,7 +980,7 @@
             this.label10.Location = new System.Drawing.Point(3, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(143, 13);
-            this.label10.TabIndex = 16;
+            this.label10.TabIndex = 1;
             this.label10.Text = "Font:";
             // 
             // lblSplitNameFont
@@ -990,7 +990,7 @@
             this.lblSplitNameFont.Location = new System.Drawing.Point(152, 37);
             this.lblSplitNameFont.Name = "lblSplitNameFont";
             this.lblSplitNameFont.Size = new System.Drawing.Size(197, 13);
-            this.lblSplitNameFont.TabIndex = 17;
+            this.lblSplitNameFont.TabIndex = 2;
             this.lblSplitNameFont.Text = "Font";
             // 
             // btnSplitNameFont
@@ -999,7 +999,7 @@
             this.btnSplitNameFont.Location = new System.Drawing.Point(355, 32);
             this.btnSplitNameFont.Name = "btnSplitNameFont";
             this.btnSplitNameFont.Size = new System.Drawing.Size(75, 23);
-            this.btnSplitNameFont.TabIndex = 1;
+            this.btnSplitNameFont.TabIndex = 3;
             this.btnSplitNameFont.Text = "Choose...";
             this.btnSplitNameFont.UseVisualStyleBackColor = true;
             this.btnSplitNameFont.Click += new System.EventHandler(this.btnSplitNameFont_Click);
@@ -1012,7 +1012,7 @@
             this.groupBox11.Location = new System.Drawing.Point(3, 61);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(439, 106);
-            this.groupBox11.TabIndex = 4;
+            this.groupBox11.TabIndex = 6;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Segment Time Comparisons";
             // 
@@ -1098,7 +1098,7 @@
             this.label16.Location = new System.Drawing.Point(3, 37);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(147, 13);
-            this.label16.TabIndex = 23;
+            this.label16.TabIndex = 4;
             this.label16.Text = "Timing Method:";
             // 
             // cmbTimingMethod
@@ -1114,7 +1114,7 @@
             this.cmbTimingMethod.Location = new System.Drawing.Point(156, 33);
             this.cmbTimingMethod.Name = "cmbTimingMethod";
             this.cmbTimingMethod.Size = new System.Drawing.Size(286, 21);
-            this.cmbTimingMethod.TabIndex = 3;
+            this.cmbTimingMethod.TabIndex = 5;
             this.cmbTimingMethod.SelectedIndexChanged += new System.EventHandler(this.cmbTimingMethod_SelectedIndexChanged);
             // 
             // DetailedTimerSettings
