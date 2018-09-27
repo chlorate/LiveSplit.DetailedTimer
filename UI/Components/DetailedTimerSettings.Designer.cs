@@ -42,16 +42,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cmbAccuracy = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblFormat = new System.Windows.Forms.Label();
+            this.grpTimerColor = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.chkOverrideTimerColors = new System.Windows.Forms.CheckBox();
             this.btnTimerColor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.chkShowGradientTimer = new System.Windows.Forms.CheckBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblDecimalsSize = new System.Windows.Forms.Label();
             this.cmbDigitsFormat = new System.Windows.Forms.ComboBox();
             this.trkDecimalsSize = new System.Windows.Forms.TrackBar();
+            this.chkShowTimer = new System.Windows.Forms.CheckBox();
             this.lblSize = new System.Windows.Forms.Label();
             this.trkSize = new System.Windows.Forms.TrackBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -101,7 +102,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbTimingMethod = new System.Windows.Forms.ComboBox();
-            this.chkShowTimer = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -109,7 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trkSegmentTimerRatio)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpTimerColor.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkDecimalsSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkSize)).BeginInit();
@@ -320,10 +320,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.cmbAccuracy, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblFormat, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.grpTimerColor, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.chkShowGradientTimer, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblDecimalsSize, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.cmbDigitsFormat, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.trkDecimalsSize, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.chkShowTimer, 0, 0);
@@ -357,27 +357,27 @@
             this.cmbAccuracy.TabIndex = 7;
             this.cmbAccuracy.SelectedIndexChanged += new System.EventHandler(this.cmbAccuracy_SelectedIndexChanged);
             // 
-            // label15
+            // lblFormat
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 148);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(138, 13);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Format:";
+            this.lblFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFormat.AutoSize = true;
+            this.lblFormat.Location = new System.Drawing.Point(3, 148);
+            this.lblFormat.Name = "lblFormat";
+            this.lblFormat.Size = new System.Drawing.Size(138, 13);
+            this.lblFormat.TabIndex = 3;
+            this.lblFormat.Text = "Format:";
             // 
-            // groupBox2
+            // grpTimerColor
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.groupBox2, 3);
-            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 32);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 77);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Color";
+            this.tableLayoutPanel2.SetColumnSpan(this.grpTimerColor, 3);
+            this.grpTimerColor.Controls.Add(this.tableLayoutPanel3);
+            this.grpTimerColor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpTimerColor.Location = new System.Drawing.Point(3, 32);
+            this.grpTimerColor.Name = "grpTimerColor";
+            this.grpTimerColor.Size = new System.Drawing.Size(427, 77);
+            this.grpTimerColor.TabIndex = 0;
+            this.grpTimerColor.TabStop = false;
+            this.grpTimerColor.Text = "Color";
             // 
             // tableLayoutPanel3
             // 
@@ -444,15 +444,15 @@
             this.chkShowGradientTimer.Text = "Show Gradient";
             this.chkShowGradientTimer.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // lblDecimalsSize
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 177);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(138, 13);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Decimals Font Size:";
+            this.lblDecimalsSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDecimalsSize.AutoSize = true;
+            this.lblDecimalsSize.Location = new System.Drawing.Point(3, 177);
+            this.lblDecimalsSize.Name = "lblDecimalsSize";
+            this.lblDecimalsSize.Size = new System.Drawing.Size(138, 13);
+            this.lblDecimalsSize.TabIndex = 5;
+            this.lblDecimalsSize.Text = "Decimals Font Size:";
             // 
             // cmbDigitsFormat
             // 
@@ -483,6 +483,18 @@
             this.trkDecimalsSize.TabIndex = 6;
             this.trkDecimalsSize.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkDecimalsSize.Value = 10;
+            // 
+            // chkShowTimer
+            // 
+            this.chkShowTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkShowTimer.AutoSize = true;
+            this.chkShowTimer.Location = new System.Drawing.Point(3, 6);
+            this.chkShowTimer.Name = "chkShowTimer";
+            this.chkShowTimer.Size = new System.Drawing.Size(138, 17);
+            this.chkShowTimer.TabIndex = 8;
+            this.chkShowTimer.Text = "Show Timer";
+            this.chkShowTimer.UseVisualStyleBackColor = true;
+            this.chkShowTimer.CheckedChanged += new System.EventHandler(this.chkShowTimer_CheckedChanged);
             // 
             // lblSize
             // 
@@ -1105,17 +1117,6 @@
             this.cmbTimingMethod.TabIndex = 3;
             this.cmbTimingMethod.SelectedIndexChanged += new System.EventHandler(this.cmbTimingMethod_SelectedIndexChanged);
             // 
-            // chkShowTimer
-            // 
-            this.chkShowTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkShowTimer.AutoSize = true;
-            this.chkShowTimer.Location = new System.Drawing.Point(3, 6);
-            this.chkShowTimer.Name = "chkShowTimer";
-            this.chkShowTimer.Size = new System.Drawing.Size(138, 17);
-            this.chkShowTimer.TabIndex = 8;
-            this.chkShowTimer.Text = "Show Timer";
-            this.chkShowTimer.UseVisualStyleBackColor = true;
-            // 
             // DetailedTimerSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1135,7 +1136,7 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.grpTimerColor.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkDecimalsSize)).EndInit();
@@ -1171,7 +1172,7 @@
         private System.Windows.Forms.TrackBar trkSize;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.CheckBox chkOverrideTimerColors;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpTimerColor;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnTimerColor;
         private System.Windows.Forms.Label label1;
@@ -1227,12 +1228,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox chkHideComparison;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblFormat;
         private System.Windows.Forms.ComboBox cmbDigitsFormat;
         private System.Windows.Forms.ComboBox cmbSegmentDigitsFormat;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbTimingMethod;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblDecimalsSize;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TrackBar trkDecimalsSize;
         private System.Windows.Forms.TrackBar trkSegmentDecimalsSize;

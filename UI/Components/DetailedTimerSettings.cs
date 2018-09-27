@@ -240,6 +240,19 @@ namespace LiveSplit.UI.Components
             Comparison = cmbComparison.SelectedItem.ToString();
         }
 
+        private void chkShowTimer_CheckedChanged(object sender, EventArgs e)
+        {
+            trkSegmentTimerRatio.Enabled
+                = grpTimerColor.Enabled
+                = chkShowGradientTimer.Enabled
+                = lblFormat.Enabled
+                = cmbDigitsFormat.Enabled
+                = cmbAccuracy.Enabled
+                = lblDecimalsSize.Enabled
+                = trkDecimalsSize.Enabled
+                = chkShowTimer.Checked;
+        }
+
         void cmbGradientType_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedText = cmbGradientType.SelectedItem.ToString();
@@ -396,6 +409,7 @@ namespace LiveSplit.UI.Components
         void DetailedTimerSettings_Load(object sender, EventArgs e)
         {
             chkHideComparison_CheckedChanged(null, null);
+            chkShowTimer_CheckedChanged(null, null);
             chkOverrideTimerColors_CheckedChanged(null, null);
             chkDisplayIcon_CheckedChanged(null, null);
             chkSplitName_CheckedChanged(null, null);
